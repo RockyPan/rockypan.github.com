@@ -17,7 +17,7 @@ url: http://rockypan.github.io
 
 # gavatar头像及Favicon
 gavatar: https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/gavatar.png
-# favicon: http://yansu-uploads.stor.sinaapp.com/imgs/favicon.ico
+favicon: https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/favicon.ico
 
 # google analytics 设置
 # ga:
