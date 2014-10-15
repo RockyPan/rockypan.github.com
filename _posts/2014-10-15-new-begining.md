@@ -15,4 +15,4 @@ description:
 
 接下去要抽点时间，沉下心来写点东西。另外还要把以前blog上的内容迁移到这里来。
 
-[img](./asset/gavatar.png)
+[img](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/gavatar.png)
