@@ -16,7 +16,7 @@ url: http://rockypan.github.io
 # rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-# gavatar: http://yansu-uploads.stor.sinaapp.com/imgs/gavatar.png
+gavatar: ./asset/gavatar.png
 # favicon: http://yansu-uploads.stor.sinaapp.com/imgs/favicon.ico
 
 # google analytics 设置
