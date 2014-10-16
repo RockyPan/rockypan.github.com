@@ -23,7 +23,7 @@ wordpress的备份功能还是比较好用，所有的文章可以导出成一�
 
 但是xml的内容比较乱，在网上搜了下，找到一个最简单的解决方案。到[这里](https://gist.github.com/duduzhu/4243714)把内容拷贝到一个xsl文件中，将xsl文件放到xml文件所在的目录，在xml文件开始插入一行
 
-```xml
+```
 <?xml-stylesheet type=”text/xsl” href=”filename.xsl” ?>
 ```
 这个xsl把替xml中的元素加了相应的html标签，再到浏览器中打开xml文件就不再是杂乱的数据了。
