@@ -25,8 +25,8 @@ favicon: https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/a
 #   url: yansu.org
 
 # disqus 设置
-# disqus:
-#   shortname: suyan-zh
+disqus:
+  shortname: rockypan
 
 # 主题设置，自动激活某个标签
 active: 技术
