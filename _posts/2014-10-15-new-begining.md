@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 新的开始
-category: 杂项
-tags: 
+category: 生活
+tags: [有感]
 keywords: 
 description: 
 ---

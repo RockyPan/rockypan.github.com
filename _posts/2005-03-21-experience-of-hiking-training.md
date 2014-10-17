@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 拉练心得
-category: 运动
-tags: [爬山, 心得]
+category: 生活
+tags: [运动]
 keywords: 爬山, 装备, 拉练
 ---
 

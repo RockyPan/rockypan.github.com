@@ -2,8 +2,8 @@
 layout: post
 title: 开始恢复老博客上的数据
 category: 杂项
-tags:
-keywords:
+tags: [其他]
+keywords: wordpress, 备份, 恢复
 description:
 ---
 
