@@ -31,4 +31,14 @@ keywords: ios开发, KVO, 控件监听
 
 另：上述方法缺省是在`NSTextField`控件中输入`enter`键时触发，如果希望在控件失入焦点时也触发，在控件的`Attributes`面板中将`Action`选项的内容改为`Sent On End Editing`即可。
 
-### 方案二 
+### 方案二 使用Delegate
+
+本来在`NSTextFieldDelegate`协议中有个方法
+
+```
+- (void)textDidChange:(NSNotification *)aNotification
+```
+
+看上去比较符合要求。可惜，这个协议在新版本的osx sdk中被废掉了。取而代之的是`NSControlTextEditingDelegate`协议。这个协议中没有上述的方法了，也只能在结束编辑时得到内容改变的通知。
+
+### 方案三 

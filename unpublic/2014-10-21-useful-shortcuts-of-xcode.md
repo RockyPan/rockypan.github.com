@@ -13,6 +13,10 @@ keywords: Xcode, 快捷键, ios开发
 * `cmd + enter`：关闭辅助编辑窗口
 * `cmd + shift + y`：打开或关闭调度区域
 * `cmd + t`：打开新的tab页
+* `cmd + w`：关闭当前tab页
+* `cmd + shfit + [/]`：在tab页之间左右切换
+
+
 
 ### 代码编辑相关
 
