@@ -3,14 +3,18 @@ layout: post
 title: 监听NSTextField控件值的改变
 category: 技术
 tags: [ios&osx]
-keywords: ios开发, KVO, 控件监听
+keywords: ios开发, KVO, 控件监听, NSTextField, NSTextView
 ---
 
 ## 监听`NSTextField`控件值的改变
 
 ### 背景
 
-想实现的功能很简单，当一个`NSTextField`控件的内容改变时设置`Button`的状态，同时会设置另一个`TextField`控件的内容。
+想实现的功能很简单，就是想监听界面中某一个`NSTextField`控件内容的改变。需要是实时的监听，而不是编辑完后按回车或焦点改变时才得到通知。
+
+本来以为很简单的事，结果还是费了一些周折，因此把过程中用过的方案和学到的东西记下来。
+
+
 
 ### 方案一 使用Action机制
 
@@ -41,4 +45,10 @@ keywords: ios开发, KVO, 控件监听
 
 看上去比较符合要求。可惜，这个协议在新版本的osx sdk中被废掉了。取而代之的是`NSControlTextEditingDelegate`协议。这个协议中没有上述的方法了，也只能在结束编辑时得到内容改变的通知。
 
-### 方案三 
+### 方案三 使用Notification
+
+### 方案四 使用KVO
+
+### NSTextField控件的特殊性
+
+NSTextField这个控件比较特殊，它不像NSTextView。它本身只做显示和占位，并不能处理输入。处理输入的总是NSTextView控件。当使用NSTextField
