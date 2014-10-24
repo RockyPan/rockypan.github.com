@@ -49,6 +49,14 @@ keywords: ios开发, KVO, 控件监听, NSTextField, NSTextView
 
 ### 方案四 使用KVO
 
-### NSTextField控件的特殊性
+### `NSTextField`控件的特殊性
 
-NSTextField这个控件比较特殊，它不像NSTextView。它本身只做显示和占位，并不能处理输入。处理输入的总是NSTextView控件。当使用NSTextField
+`NSTextField`这个控件比较特殊，它不像`NSTextView`。它本身只做显示和占位，并不能处理输入。处理输入的总是`NSTextView`控件。
+
+官文档的`NSWindow`部分有说到这个。每个`window`有一个叫`field editor`的属性，实际上它是一个`NSTextView`，它会按需创建，被`window`上的所有轻量输入控件所共享，用来处理文字输入。这些控件就包括`NSTextField`，`NSTextFieldCell`等。
+
+也就是说当`window`上的某一个`NSTextField`控件得到焦点时，实际上是把一个公用的`NSTextView`控件摆到了相应的`NSTextField`控件所在的位置，输入全部发生在`NSTextView`控件中。当输入完成失去焦点时，`NSTextView`控件功成身退被隐藏起来，刚输入的文字则传给相应的`NSTextField`控件，它负责具体的显示。
+
+这就是为什么方案三中注册观察器时不能设置最后那个`object`参数。把`NSTextField`对象设进去肯定没用，因为通知根本不是由它产生的。在那个时间点也得不到`window`的`field editor`，因为它是按需创建的。
+框架会为window上的所有`NSTextField`控件
+当使用NSTextField进行输入时，框架会
