@@ -45,27 +45,27 @@ obj's address is : 0012F843
 跟踪进去我们要以看到是一条跳转指令，继续执行可以看到真正的函数代码部分，如下(注：为了讨论方便我在第行前面加了一个行号)：
 
 ```am
-00425FE0 push ebp
-00425FE1 mov ebp,esp
-00425FE3 sub esp,0CCh
-00425FE9 push ebx
-00425FEA push esi
-00425FEB push edi
-00425FEC push ecx
-00425FED lea edi,[ebp+FFFFFF34h]
-00425FF3 mov ecx,33h
-00425FF8 mov eax,0CCCCCCCCh
-00425FFD rep stos dword ptr [edi]
-00425FFF pop ecx
-00426000 mov dword ptr [ebp-8],ecx
-00426003 mov eax,dword ptr [ebp-8]
-00426006 mov byte ptr [eax],2
-00426009 pop edi
-0042600A pop esi
-0042600B pop ebx
-0042600C mov esp,ebp
-0042600E pop ebp
-0042600F ret
+01 00425FE0 push ebp
+02 00425FE1 mov ebp,esp
+03 00425FE3 sub esp,0CCh
+04 00425FE9 push ebx
+05 00425FEA push esi
+06 00425FEB push edi
+07 00425FEC push ecx
+08 00425FED lea edi,[ebp+FFFFFF34h]
+09 00425FF3 mov ecx,33h
+10 00425FF8 mov eax,0CCCCCCCCh
+11 00425FFD rep stos dword ptr [edi]
+12 00425FFF pop ecx
+13 00426000 mov dword ptr [ebp-8],ecx
+14 00426003 mov eax,dword ptr [ebp-8]
+15 00426006 mov byte ptr [eax],2
+16 00426009 pop edi
+17 0042600A pop esi
+18 0042600B pop ebx
+19 0042600C mov esp,ebp
+20 0042600E pop ebp
+21 0042600F ret
 ```
 
 我们看看第7行，把ecx寄存器入栈，后面4行初始化了函数的堆栈中的保存局部变量的部分。第12行弹出ecx值，到这里时ecx的值保持为在函数调用前存入的对象内存地址，第13行就是保存`this`指针的值，作为一个局部变量。这样我们就知道了VC7.1不是象传递普通函数那样通过压栈来传递`this`指针，而是通过ecx寄存器来传递。第14、15行利用这个`this`指针给对象的成员变量进行了赋值。
