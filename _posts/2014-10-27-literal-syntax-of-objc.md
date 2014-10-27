@@ -8,7 +8,7 @@ keywords: object-c, 字符常量, Literal Syntax
 
 ## object-c 字符常量运用
 
-”语法笨重，代码拖沓冗长“，一直是object-c被人诟病的地方。创建常用的Foundation对象时，使用字符常量来代替方法调用的方式可以大大的精简代码，增强可读性。甚至更加安全（后面会提到）。本文根据《Effective Object-C 2.0 - 52 Specific Ways to Improve Your iOS and OS X Programs》中第三条整理而成，留做参考。
+“语法笨重，代码拖沓冗长”，一直是object-c被人诟病的地方。创建常用的Foundation对象时，使用字符常量来代替方法调用的方式可以大大的精简代码，增强可读性。甚至更加安全（后面会提到）。本文根据《Effective Object-C 2.0 - 52 Specific Ways to Improve Your iOS and OS X Programs》中第三条整理而成，留做参考。
 
 ### 普通常量构造
 
@@ -74,7 +74,7 @@ NSDictionary *personData = @{@"firstName" : @"Matt",
 
 要注意的地方和`NSArray`一样。
 
-另外”键-值对”的写法是：key:value，而在初始化方法中是：value:key。显然常量写法中使用的“键-值对”顺序更符合直觉。不知道为什么会设计成这个样子。
+另外“键-值对”的写法是：key:value，而在初始化方法中是：value:key。显然常量写法中使用的“键-值对”顺序更符合直觉。不知道为什么会设计成这个样子。
 
 ### Mutable版本
 
