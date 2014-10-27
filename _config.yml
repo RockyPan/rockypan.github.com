@@ -13,7 +13,7 @@ author:
 title: 潘凯的博客 
 description: 潘凯的博客
 url: http://rockypan.github.io
-# rss_url: /pages/atom.xml
+rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
 gavatar: https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/gavatar.png
@@ -32,9 +32,9 @@ disqus:
 active: 技术
 
 # 首页除了最新文章外显示分类
-# cates: 
-#   - Python
-#   - OpenStack
+ cates: 
+   - 技术
+   - 生活
 
 # 中文本地化
 locals:
