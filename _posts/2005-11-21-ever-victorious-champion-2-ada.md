@@ -26,11 +26,11 @@ keywords: 冠军, 照片
 
 #### 比赛前的节目表演
 
-![比赛前的节目表演](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion2_3.jpg)
+![比赛前的节目表演](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion2_1.jpg)
 
 #### 冠军颁奖
 
-![冠军颁奖](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion2_3.jpg)
+![冠军颁奖](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion2_2.jpg)
 
 #### 合影
 
