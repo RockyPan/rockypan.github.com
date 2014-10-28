@@ -31,6 +31,7 @@ keywords: 冠军, 照片
 #### 嗯，先观摩一下其他组的比赛
 
 ![嗯，先观摩一下其他组的比赛](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_1.jpg)
+<center>*嗯，先观摩一下其他组的比赛*</center>
 
 #### 比赛前，妈妈在面授机宜
 
