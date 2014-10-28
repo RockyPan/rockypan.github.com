@@ -28,38 +28,45 @@ keywords: 冠军, 照片
 
 第一项比赛是用很多小片积木拼一个图形，虽然潘玥没玩过这个游戏，但这类型的游戏都属于她的强项。她的手很巧，特别擅长精细运动。果然，她以绝对的优势取得第一名，拼了几十片几乎没有范错误，也没有浪费时间，远远的抛开了第二名。规定时间结束时还有三个小宝宝没有完成。
 
-#### 嗯，先观摩一下其他组的比赛
+---
 
 ![嗯，先观摩一下其他组的比赛](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_1.jpg)
-<center>*嗯，先观摩一下其他组的比赛*</center>
+<center>**嗯，先观摩一下其他组的比赛**</center>
 
-#### 比赛前，妈妈在面授机宜
+---
 
 ![比赛前，妈妈在面授机宜](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_2.jpg)
+<center>**比赛前，妈妈在面授机宜**</center>
 
-#### (比赛进行中)正式比赛了，我可不马虎哩
+---
 
 ![(比赛进行中)正式比赛了，我可不马虎哩](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_3.jpg)
+<center>**(比赛进行中)正式比赛了，我可不马虎哩**</center>
 
-#### 小菜一碟，看我两下就搞定了
+---
 
 ![小菜一碟，看我两下就搞定了](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_4.jpg)
+<center>**小菜一碟，看我两下就搞定了**</center>
 
-#### 虽然我个子小，我的步子可大哩
+---
 
 ![虽然我个子小，我的步子可大哩](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_5.jpg)
+<center>**虽然我个子小，我的步子可大哩**</center>
 
-#### 这个比赛还真好玩！
+---
 
 ![这个比赛还真好玩！](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_6.jpg)
+<center>**这个比赛还真好玩！**</center>
 
-#### 又赢了，嘢……
+---
 
 ![又赢了，嘢……](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_7.jpg)
+<center>**又赢了，嘢……**</center>
 
-#### 这次的证书怎么是这样的。“爸爸真爱现，领奖就上来了。”
+---
 
 ![这次的证书怎么是这样的。“爸爸真爱现，领奖就上来了。”](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/champion3_8.jpg)
+<center>**这次的证书怎么是这样的。“爸爸真爱现，领奖就上来了。”**</center>
 
 ----
 
