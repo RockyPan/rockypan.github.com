@@ -20,3 +20,4 @@ id returnValue = objc-msgSend(receivedObject, @selector(messageName:), parameter
 
 objc_msgSend在找到相应的selector的函数地址后，不是用call指令，而是直接跳到相应的方法执行，这样可以降低栈溢出的风险。也意味着我们在消息中打断点，在调用堆栈中不会看到objc_msgSend的身影。（这里要验证一下，最好是能看下相应的汇编代码。)
 
+应该始终用introspection的方法来判断对象的关系，而不是通过判断class方法的返回值是否相等，因为对象本身可能通过一些手段(message forwarding)动态的改变了introspection方法的实现，导致两种方式的结果会不一样。

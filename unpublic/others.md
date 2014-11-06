@@ -43,4 +43,10 @@
 
 hash函数的性能不能太差，将对象添加到集合对象时，hash方法会被频繁的调用，比较容易出现性能问题。
 
+designated initializer
+只有designated initializer可以访问内部的数据，这样当需要修改内部数据的形式，或是修改对内部数据的访问时，只需要更改一个地方。其他的initializer方法都调用designated initializer。
+在继承体系中要保证designated initializer的调用链，即子类的designated initializer调用父类的designated initializer。
+如果子类的designated initializer和父类的designated initializer不同名，子类一般需要重载父类的designated initializer并做相应的适配处理。
 
+需要查看UI控件的层次结构时可以用以下命令打印出view上的UI控件的层次结构：
+po [self.view recursiveDescription]
