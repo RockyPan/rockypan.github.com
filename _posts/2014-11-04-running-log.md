@@ -43,3 +43,5 @@ keywords: 长跑, 跑步, 足底筋膜炎
 比较悲剧的时忘记了带表，没法掌握时间和速度。自己估计可能是五分钟以内的速度。
 
 跑完感觉还不错，虽然大腿肌肉的酸痛还没恢复，右脚底板也还在微微的抱怨。
+
+![我们的疯行者队合影](https://raw.githubusercontent.com/RockyPan/rockypan.github.com/master/asset/2014-11-07-running-log.png)
