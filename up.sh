@@ -4,5 +4,5 @@
 
 git add .
 msg=${1:-home}
-git commit -a -m $msg
+git commit -a -m "$msg"
 git push
