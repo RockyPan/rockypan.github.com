@@ -50,3 +50,31 @@ designated initializer
 
 需要查看UI控件的层次结构时可以用以下命令打印出view上的UI控件的层次结构：
 po [self.view recursiveDescription]
+
+
+由于objc的动态特性，实际上是没有所谓的私有方法。因此类中的私有方法最好加个前缀进行区分，方便代码的阅读和调度。但是千万注意不要直接用单下划线做前缀，因为这个命名法被ios的sdk使用了。如果用单下划线做前缀来写私有方法，很容易和框架的基类中的私有方法冲突，覆盖掉父类的私有方法。而且这种总是很难查出来。
+
+ARC缺省不是异常安全的，这意味着在异常发生时，相应的代码块内的对象不会被正确的调用release。通过添加编译选项-fobjc-arc-exceptions，可以做到异常安全，但是要付出性能上的代价，即使并没有异常发生。所以这个选项默认是关闭的。
+
+一般只有在有无法挽回，不能继续运行的错误出现时才主动的抛出异常。否则应该通过返回nil或错误码，或者是NSError对象来反馈出错信息。NSError包含三个信息，Error domain，错误分类；Error code，该分类下的错误码；及一个dictionary，包含更多的出错描述信息。一般来说将错误信息传到delegate中时多用NSError对象。
+
+要自定义copy的语义，不要重载copy方法，而应该实现NSCopying协议。
+如果对象有mutable和immutable两个版本除了NSCopying还要实现NSMutableCopying协议。
+copy协议中的拷贝行为默认是浅拷贝，如果要实现深拷贝，自己在接口中添加相应的方法。
+
+一般在处理标志位逻辑的做法是，申明枚举常量来定义标志位，然后用一个无符号整数来存放标志位数据，使用时通过位运算来进行对比检测。
+更好的做法是使用以下方法：
+struct {
+    unsigned int flagA : 1 ;
+    unsigned int flagB : 1 ;
+    unsigned int flagC : 1 ;
+    unsigned int flagD : 1 ;
+} XXX_Status;
+
+category中的方法名一定要加上一个独特的前缀。runtime在加载时会将所有category中的方法加入到相应的class对象的方法列表中，因此category中的同名方法会覆盖主类中的方法，不同category中的同名方法全部会被最后一个加载的category中的方法覆盖。而且这种问题特别难查。
+
+在interface中定义成readonly的property，可以在class-continuation category中重新定义成read-write。这样对外是只读的，对内是读写的。这种方式相对于在内部直接访问低层数据的好处是，可以触发KVO。
+
+
+
+
