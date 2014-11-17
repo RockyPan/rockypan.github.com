@@ -75,6 +75,13 @@ category中的方法名一定要加上一个独特的前缀。runtime在加载�
 
 在interface中定义成readonly的property，可以在class-continuation category中重新定义成read-write。这样对外是只读的，对内是读写的。这种方式相对于在内部直接访问低层数据的好处是，可以触发KVO。
 
+dealloc方法的调用时机是没有保障的，你永远不知道系统框架是否会retain你的对象。因此对于资料的释放如(网络连接，数据库连接，文件描述符)不要放在dealloc方法中。因为有可能根本没被释放。这类资料应该放到单独的清理方法中显式的调用，比如增加一对open，close方法或start，stop方法。为了确保close或stop方法被调用，可以在dealloc中进行一次检测和保底是的调用，如果发现方法被漏调了，可以在dealloc中输出一个错误日志。
+dealloc方法中只应该有对非objc对象的清理，有对通知事件的反注册逻辑。
+除了上述的特例之外，千万不要在dealloc中调用其他方法，因为对象已经处一个待销毁的状态，其他方法中如果会触发异步回调，回调时对象已经不存在了。也不要调用属性，属性的设和取方法可能被重载，如果触发KVO，其他的对象可能又会来retain本对象，这样会将runtime的状态打乱千万奇怪的崩溃。
 
+通过设置环境变量
+export NSZombieEnabled="YES"
+可以打开zomibe内存选项，用来查内存问题。在Xcode中也可以设置，效果一样，xcode会在运行app前设置这个环境变量。设置后runtime会将dealloc的方法动态改掉，改变后dealloc会把对象变为一个zomibe对象，该对象无方法，这样如果还向该对象发送消息会走到forwarding机制，最终会终止程序并打印出相应的消息名和对象的地址。
+打开这个选项后，被dealloc的对象并不会被回收，调度完成后记得关掉。
 
 
