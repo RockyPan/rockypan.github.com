@@ -84,4 +84,7 @@ export NSZombieEnabled="YES"
 可以打开zomibe内存选项，用来查内存问题。在Xcode中也可以设置，效果一样，xcode会在运行app前设置这个环境变量。设置后runtime会将dealloc的方法动态改掉，改变后dealloc会把对象变为一个zomibe对象，该对象无方法，这样如果还向该对象发送消息会走到forwarding机制，最终会终止程序并打印出相应的消息名和对象的地址。
 打开这个选项后，被dealloc的对象并不会被回收，调度完成后记得关掉。
 
+避免使用performSelector方法簇，改用block加GCD来替代。如：dispatch_after、dispatch_sync和dispatch_asyn方法簇。
+
+对于只需要执行一次并且严格要求线程安全的任务(比如说单件对象的创建)，可以用dispatch_once来执行。该方法确保相同token对应的block只被执行一次。因此token可以申请为静态或全局的变量，确保它的唯一性。
 
