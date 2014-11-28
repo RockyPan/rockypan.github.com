@@ -88,3 +88,13 @@ export NSZombieEnabled="YES"
 
 对于只需要执行一次并且严格要求线程安全的任务(比如说单件对象的创建)，可以用dispatch_once来执行。该方法确保相同token对应的block只被执行一次。因此token可以申请为静态或全局的变量，确保它的唯一性。
 
+当需要缓存时，比如缓存下载的图片，使用NSCache，而不是自己用NSDdictionary来做缓存。NSCache的好处是：当内存紧张时它会自动删除不常使用的内容；它是线程安全的；它不拷贝key对象。而这三条使用NSDictionary时都需要自行用代码实现。
+
+block的使用很容易千万循环引用，尤其是在block中使用外层类的实体变量或访问它的property，这会造成block持有外层对象。如果外层对象又直接或间接的持有了block变量，就造成了循环引用。
+比如：类中有一个NSTimer变量，timer定期执行的是一个block，而该block中访问了类的实体变量或属性。这样就形成了，类对象持有timer，timer持有block，block又持有类对象的一个循环。
+打破这类循环的关键一般可以在block中通过self的弱指针来访问实体变量或属性。
+__weak CSomeClass * weakSelf = self;
+void ^block() {
+    CSomeClass * strongSelf = weakSelf;
+    [self someProperty];
+}
